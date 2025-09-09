@@ -95,6 +95,7 @@ header {
     display: flex;
     gap: 3vh;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 h1 {
