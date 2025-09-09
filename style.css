@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3vh;
+    flex-direction: column;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1vh 0px;
+}
+
+.pesquisaContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.campo {
+    flex: 1;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 0 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    background: rgba(255, 255, 255, 0.85);
+    transition: all 0.3s ease;
+}
+
+.campo:focus {
+    border-color: #999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.botao {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+h1 {
+    color: #000;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-foto img {
+    border-radius: 20px;
+    max-width: 600px;
+}
+
+
+@keyframes emojiWobble {
+    0%   { transform: rotate(0deg); }
+    15%  { transform: rotate(8deg); }
+    30%  { transform: rotate(-8deg); }
+    45%  { transform: rotate(6deg); }
+    60%  { transform: rotate(-6deg); }
+    75%  { transform: rotate(4deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .wobble {
+    display: inline-block;
+    animation: emojiWobble 0.5s infinite ease-in-out;
+    transform-origin: center;
+  }
+  
