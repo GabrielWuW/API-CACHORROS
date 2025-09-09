@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -39,6 +39,7 @@ header {
     align-items: center;
     flex-direction: column;
     padding: 1vh 0px;
+    margin-bottom: 5vh;
 }
 
 .pesquisaContainer {
@@ -89,6 +90,13 @@ header {
     cursor: pointer;
 }
 
+.fotos {
+    width: 90%;
+    display: flex;
+    gap: 3vh;
+    flex-wrap: wrap;
+}
+
 h1 {
     color: #000;
     font-size: 2rem;
@@ -96,9 +104,14 @@ h1 {
     margin-bottom: 20px;
 }
 
+.container-foto {
+    display: inline-block;
+}
+
 .container-foto img {
     border-radius: 20px;
     max-width: 600px;
+    display: block;
 }
 
 

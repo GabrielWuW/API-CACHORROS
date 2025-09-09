@@ -8,4 +8,4 @@ async function buscarImagens(raca) {
     return imagens.message;
 }
 
-buscarImagens('African');
+buscarImagens('african');
