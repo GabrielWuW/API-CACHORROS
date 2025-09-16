@@ -4,7 +4,12 @@ async function buscarImagens(raca) {
     const url = `https://dog.ceo/api/breed/${raca}/images`;
     const response = await fetch(url);
     const imagens = await response.json();
-    return imagens.message;
+
+    if (imagens.status === 'error') {
+        return [];
+    } else if (imagens.status === 'success') {
+        return imagens.message;
+    }
 }
 
 function criarCard(imagem) {
@@ -26,14 +31,21 @@ async function mostrarImagens(raca) {
     const container = document.querySelector('.fotos');
     container.innerHTML = '';
 
-    imagens.forEach(imagem => {
-        criarCard(imagem);
-    });
+    if (imagens.length == 0) {
+        const mensagemErro = document.createElement('h1');
+        mensagemErro.classList.add('glass-card')
+        mensagemErro.textContent = 'Não encontrei esse cachorro...';
+        container.appendChild(mensagemErro);
+    } else {
+        imagens.forEach(imagem => {
+            criarCard(imagem);
+        });
+    }
 }
-
-
 
 const campoPesquisa = document.querySelector('.campo');
 const botaoPesquisa = document.querySelector('.botao');
 
-botaoPesquisa.addEventListener('click', () => mostrarImagens(campoPesquisa.value));
+botaoPesquisa.addEventListener('click', () => {
+    mostrarImagens(campoPesquisa.value);
+});
